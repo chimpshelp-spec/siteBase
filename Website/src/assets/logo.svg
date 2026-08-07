@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <!-- Simple stylized 'E' logo: white on transparent -->
+  <rect width="120" height="120" fill="none" />
+  <g fill="#FFFFFF">
+    <path d="M18 20 L86 20 L86 36 L46 36 L46 52 L78 52 L78 68 L46 68 L46 84 L86 84 L86 100 L18 100 Z" />
+  </g>
+</svg>
