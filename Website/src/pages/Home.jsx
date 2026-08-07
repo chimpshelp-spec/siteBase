@@ -1,11 +1,10 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), remove:async()=>({}) }) }) };
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import ElementalShowcase from "@/components/ElementalShowcase";
-
-const LOGO_URL = "https://media.db.com/images/public/6a760cf7f7782023384a3fe2/256a2e377_34bc5bc64_generated_image-removebg-preview.png";
+import logo from "@/assets/logo.svg";
 
 const START_DATE = new Date("2026-01-01T00:00:00Z").getTime();
 const RELEASE_DATE = new Date("2026-12-10T00:00:00Z").getTime();
@@ -77,7 +76,7 @@ export default function Home() {
       {/* hero */}
       <section className="relative z-10 flex min-h-[calc(100vh-60px)] flex-col items-center justify-center px-6 pb-32 pt-10">
         <motion.img
-          src={LOGO_URL}
+          src={logo}
           alt="ELEMENTAL"
           initial={{ opacity: 0, y: 24, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
