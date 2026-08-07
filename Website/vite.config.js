@@ -1,9 +1,10 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// FIX: You must import the base44 plugin before you can use it.
-// Replace the string below with the actual path to your base44 file or npm package name.
-import base44 from './base44/index.js' 
+// IMPORT FIX: Pulling the tool from your node_modules instead of the local config folder.
+// NOTE: If this still throws an error, check your package.json and replace 
+// '@base44/vite-plugin' with the exact base44 package name listed there.
+import base44 from '@base44/vite-plugin'
 
 // https://vite.dev/config/
 export default defineConfig({
